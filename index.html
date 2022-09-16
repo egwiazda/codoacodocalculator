@@ -15,6 +15,20 @@
     min-width: 60px;
     max-width: 60px;
 }
+   .resultado {
+		/*display: flex;*/
+		justify-content: center;
+		align-items: center;
+		height: 75px;
+		width: 410px;
+		border-radius: 25px 25px 0 0;
+		background-color: #899099;
+   }
+   .calculadora {
+	   border: 2px solid rgb(150, 48, 48);
+	   background-color:rgb(150, 48, 48);
+	   border-radius: 25px 25px 0 0;
+   }
 </style>
 
 <body style="background-image: url('img/Fondo.jpg') ">
@@ -23,90 +37,70 @@
  
 	<div class="container">
 
-		<div class="row"> 
-			<div class="col-1 col-sm-12"></div>				
+		<div class="row"> 			
 			<div class="mt-5 col-12">
-			<div class="container-fluid">	
-				<div class="row">
-					<div class="col-md-1 col-sm-1"></div>	
-					<div class="col-sm-11 col-md-11  text-center">
-							<input class="text-center" type="text" size="95%" disabled id="input">
-							<br><br>
-
-							<button type="button" class="btn btn-danger" id="back"><---</button>
-							<button type="button" class="btn btn-danger" id="cancel">C</button>
-							<button type="button" class="btn btn-danger" id="signchange">+/-</button>
-							<button type="button" class="btn" id="open">(</button>
-							<button type="button" class="btn" id="close">)</button> 
-							<button type="button" class="btn" id="fact">x!</button>
-							<button type="button" class="btn" id="abs">abs x</button>
-							<button type="button" class="btn" id="rndx">round</button>
-							<label class="radio-inline">
-							<input type="radio" name="optradio" id="deg" checked>Deg
-							</label>
-							<label class="radio-inline">
-							<input type="radio" name="optradio" id="rad">Rad
-							</label>
-							<button type="button" class="btn btn-warning" type="button"  data-toggle="modal" data-target="#myModal"><i class="fa fa-question-circle"></i></button>
-
-							<br><br>
-
-							<button type="button" class="btn" id="sin">sin</button>
-							<button type="button" class="btn" id="cos">cos</button>
-							<button type="button" class="btn" id="tg">tg</button>
-							<button type="button" class="btn" id="xpowy">x<sup>y</sup></button>
-							<button type="button" class="btn" id="pi">π</button>
-							<button type="button" class="btn" id="exp">e</button>
-							<button type="button" class="btn" id="seven">7</button>
-							<button type="button" class="btn" id="eight">8</button>
-							<button type="button" class="btn" id="nine">9</button>
-							<button type="button" class="btn" id="divide">/</button>
-							<button type="button" class="btn" id="modulo">%</button>
-
-							<br><br>
-							<button type="button" class="btn" id="asinh">sinh<sup>-1</sup></button>
-							<button type="button" class="btn" id="acosh">cosh<sup>-1</sup></button>
-							<button type="button" class="btn" id="atanh">tanh<sup>-1</sup></button>
-							<button type="button" class="btn" id="log2">log<sub>2</sub>x</button>
-							<button type="button" class="btn" id="ln">ln</button>
-							<button type="button" class="btn" id="log10">log<sub>10</sub></button>
-							<button type="button" class="btn" id="four">4</button>
-							<button type="button" class="btn" id="five">5</button>
-							<button type="button" class="btn" id="six">6</button>
-							<button type="button" class="btn" id="mul">*</button>
-							<button type="button" class="btn" id="inv">1/x</button>
-
-							<br><br>
+				<div class="container-fluid">	
+				<div class="row no-gutters">
+					<div class="col-md-3 col-sm-1"></div>	
+						<div class="calculadora col-sm-11 col-md-6 pb-2 text-center " >
+							<div class="row d-flex justify-content-center  mb-2 mt-3">
+								<div class="resultado" id="result"></div>
+							</div>
+							<div class="row d-flex justify-content-center mb-2">
+								<button type="button" class="btn ml-2" id="open">(</button>
+								<button type="button" class="btn ml-2" id="close">)</button> 
+								<button type="button" class="btn ml-2" id="fact">x!</button>
+								<button type="button" class="btn ml-2" id="x2">x<sup>2</sup></button>
+								<button type="button" class="btn ml-2" id="sqrt">√</button> 
+								<button type="button" class="btn ml-2" id="xrty"><sup>x</sup>√y</button>
+							</div>
 							
-							<button type="button" class="btn" id="sin">sin</button>
-							<button type="button" class="btn" id="cos">cos</button>
-							<button type="button" class="btn" id="tan">tan</button>
-							<button type="button" class="btn" id="x2">x<sup>2</sup></button>
-							<button type="button" class="btn" id="x3">x<sup>3</sup></button>
-							<button type="button" class="btn" id="tenpow">10<sup>x</sup></button>
-							<button type="button" class="btn" id="one">1</button>
-							<button type="button" class="btn" id="two">2</button>
-							<button type="button" class="btn" id="three">3</button>
-							<button type="button" class="btn" id="minus">-</button>
-							<button type="button" class="btn" id="add">+</button>
+							<div class="row d-flex justify-content-center mb-2">
+								<button type="button" class="btn ml-2" id="sin">sin</button>
+								<button type="button" class="btn ml-2" id="cos">cos</button>
+								<button type="button" class="btn ml-2" id="tg">tg</button>
+								<button type="button" class="btn ml-2" id="x3">x<sup>3</sup></button>
+								<button type="button" class="btn ml-2" id="cubrt"><sup>3</sup>√</button>
+								<button type="button" class="btn ml-2" id="xpowy">x<sup>n</sup></button>
+							</div>
 
-							<br><br>
+							<div class="row d-flex justify-content-center  mb-2">
+								<button type="button" class="btn ml-2" id="one">1</button>
+								<button type="button" class="btn ml-2" id="two">2</button>
+								<button type="button" class="btn ml-2" id="three">3</button>
+								<button type="button" class="btn ml-2" id="divide">/</button>
+								<button type="button" class="btn ml-2" id="modulo">%</button>
+								<button type="button" class="btn ml-2" id="ln">ln</button>
+							</div>
 
-							<button type="button" class="btn" id="asin">sin<sup>-1</sup></button>
-							<button type="button" class="btn" id="acos">cos<sup>-1</sup></button>
-							<button type="button" class="btn" id="atan">tan<sup>-1</sup></button>
-							<button type="button" class="btn" id="logxy">log<sub>y</sub>x</button> 
-							<button type="button" class="btn" id="epow">e<sup>x</sup></button> 
-							<button type="button" class="btn" id="xrty"><sup>x</sup>√y</button>
-							<button type="button" class="btn" id="sqrt">√</button> 
-							<button type="button" class="btn" id="cubrt"><sup>3</sup>√</button>
-							<button type="button" class="btn" id="zero">0</button>
-							<button type="button" class="btn" id="point">.</button>
-							<button type="button" class="btn btn-success" style="max-width: 120px;" id="equals">=</button>					
+							<div class="row d-flex justify-content-center  mb-2">
+								<button type="button" class="btn ml-2" id="four">4</button>
+								<button type="button" class="btn ml-2" id="five">5</button>
+								<button type="button" class="btn ml-2" id="six">6</button>
+								<button type="button" class="btn ml-2" id="mul">*</button>
+								<button type="button" class="btn ml-2" id="ln">ln</button>	
+								<button type="button" class="btn ml-2" id="epow">e<sup>x</sup></button> 
+							</div>
+							<div class="row d-flex justify-content-center  mb-2">
+								<button type="button" class="btn ml-2" id="seven">7</button>
+								<button type="button" class="btn ml-2" id="eight">8</button>
+								<button type="button" class="btn ml-2" id="nine">9</button>
+								<button type="button" class="btn ml-2" id="minus">-</button>
+								<button type="button" class="btn ml-2 btn-danger" id="cancel">AC</button>
+								<button type="button" class="btn ml-2 btn-double btn-success"  id="equals">=</button>
+							</div>
+							<div class="row d-flex justify-content-center  mb-2">
+								<button type="button" class="btn ml-2" id="point">.</button>
+								<button type="button" class="btn ml-2" id="zero">0</button>
+								<button type="button" class="btn ml-2" id="pi">π</button>
+								<button type="button" class="btn ml-2" id="add">+</button>
+								<button type="button" class="btn ml-2" id="mem">MR</button>
+								<button type="button" class="btn ml-2" id="dot">.</button>
+							</div>				
+						</div>
 					</div>
-					<div class="col-md-1 col-sm-1"></div>	
+					<div class="col-md-3 col-sm-1"></div>	
 				</div>
-			</div>
 			</div>
 		<div class="col-1 col-sm-12"></div>	
 	</div>
