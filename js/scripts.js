@@ -12,7 +12,6 @@ document.getElementById("close").onclick=function(){
 document.getElementById("one").addEventListener("click",function(){
     str+="1";
     document.getElementById("result").textContent=str;
-    alert ("hola");
 });
 document.getElementById("two").onclick=function(){
     str+="2";
